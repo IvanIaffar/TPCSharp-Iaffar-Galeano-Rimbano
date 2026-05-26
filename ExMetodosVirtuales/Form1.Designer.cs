@@ -35,7 +35,7 @@ namespace Figuras
             //
             // dibujarButton
             //
-            this.dibujarButton.Location = new System.Drawing.Point(500, 234);
+            this.dibujarButton.Location = new System.Drawing.Point(660, 250);
             this.dibujarButton.Name = "dibujarButton";
             this.dibujarButton.Size = new System.Drawing.Size(75, 23);
             this.dibujarButton.TabIndex = 0;
@@ -45,9 +45,9 @@ namespace Figuras
             //
             // pictureBox1
             //
-            this.pictureBox1.Location = new System.Drawing.Point(59, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(365, 227);
+            this.pictureBox1.Size = new System.Drawing.Size(730, 230);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             //
@@ -55,7 +55,7 @@ namespace Figuras
             //
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 291);
+            this.ClientSize = new System.Drawing.Size(760, 295);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dibujarButton);
             this.Name = "Form1";

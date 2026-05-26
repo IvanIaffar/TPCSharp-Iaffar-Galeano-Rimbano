@@ -14,12 +14,14 @@ namespace Figuras
         public Form1()
         {
             InitializeComponent();
-            int[] tamanios = new int[] { 40, 60, 80 }; // proporciones 1x, 1.5x, 2x
+            int[] tamanios = new int[] { 40, 60, 80, 100, 120 }; // proporciones 1x, 1.5x, 2x, 2.5x, 3x
             figuras = new Figura[]
             {
                 new Circulo(tamanios[0]),
                 new Rectangulo(tamanios[1], tamanios[1] + 20),
                 new Cuadrado(tamanios[2]),
+                new TrianguloEquilatero(tamanios[3]),
+                new TrianguloIsosceles(tamanios[4], tamanios[4] + 20),
             };
 
         }
@@ -41,7 +43,7 @@ namespace Figuras
             for (int i = 0; i < figuras.Length; i++)
             {
                 Pen pen = new Pen(GenerarColorContrastante());
-                figuras[i].Dibujar(pen, gr, i * 100, 50);
+                figuras[i].Dibujar(pen, gr, 10 + i * 140, 20);
             }
 
         }
