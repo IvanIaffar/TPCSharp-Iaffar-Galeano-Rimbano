@@ -9,6 +9,7 @@ namespace Figuras
     public partial class Form1 : Form
     {
         Figura[] figuras;
+        Random rnd = new Random();
 
         public Form1()
         {
@@ -22,13 +23,23 @@ namespace Figuras
 
         }
 
+        // c.2) Descarta colores con brillo > 0.65 (demasiado claros respecto al fondo blanco)
+        private Color GenerarColorContrastante()
+        {
+            Color color;
+            do
+            {
+                color = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+            } while (color.GetBrightness() > 0.65f);
+            return color;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Graphics gr = pictureBox1.CreateGraphics();
-            Color[] colores = new Color[] { Color.Red, Color.Blue, Color.Green };
             for (int i = 0; i < figuras.Length; i++)
             {
-                Pen pen = new Pen(colores[i]);
+                Pen pen = new Pen(GenerarColorContrastante());
                 figuras[i].Dibujar(pen, gr, i * 100, 50);
             }
 
