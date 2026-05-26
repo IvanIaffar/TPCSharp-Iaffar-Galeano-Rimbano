@@ -14,11 +14,12 @@ namespace Figuras
         public Form1()
         {
             InitializeComponent();
-            figuras = new Figura[3]
+            int[] tamanios = new int[] { 40, 60, 80 }; // proporciones 1x, 1.5x, 2x
+            figuras = new Figura[]
             {
-                new Circulo(60),
-                new Rectangulo(30,50),
-                new Cuadrado(45),
+                new Circulo(tamanios[0]),
+                new Rectangulo(tamanios[1], tamanios[1] + 20),
+                new Cuadrado(tamanios[2]),
             };
 
         }
